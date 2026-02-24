@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-container">
+    <img src="img/logo123.png" class="center-icon">
+  </div>
+  <nav class="header__nav">
+    <a href="index.html" class="header__link">Menu</a>
+    <a href="contact.html" class="header__link">Contact</a>
+    <a href="admin.html" class="header__link">Admin</a>
+
+  </nav>
+</header>
+
+<main class="main">
+
+  <h2 class="page-title">Listing Manager</h2>
+
+  <section class="product-card" style="padding:1rem">
+    <input id="name" placeholder="Product name" class="admin-input">
+    <input id="price" placeholder="Price" class="admin-input">
+<input type="file" id="imageFile" class="admin-input" accept="image/*">    <textarea id="desc" placeholder="Description" class="admin-input"></textarea>
+    <button class="admin-btn" onclick="addListing()">Add Listing</button>
+  </section>
+
+  <h3 style="margin-top:2rem;">Current Listings</h3>
+  <section class="products" id="adminList"></section>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="admin.js"></script> <!-- listing.js not needed on admin page; admin.js handles loading -->
+  <footer class="footer">
+    <p class="footer__text">© Maplewood Shop — Fresh &amp; Local</p>
+  </footer></body>
+</html>
